@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h1>Administration Guide</h1>
+<body>
+<form action="#">
+    <fieldset>
+        <legend>DETAILS</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Type here"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Type here"><br><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter here"><br><br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" placeholder="Enter here"><br><br>
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter here"><br><br>
+        <label for="message">Message Description:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>  </textarea>
+  <br><br>
+        <br><br><label for="">Select your Degree:</label>
+        <select name="Department" id="dep">
+          <option value="IT">IT</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Finance">Finance</option>
+          <option value="Sales">Sales</option>
+          <option value="HR">HR</option>
+        </select> 
+        <br><br>
+        <p>Specify Role:</p>
+  
+
+        <input type="radio" id="Admin" name="role" value="Admin">
+        <label for="role">Admin</label>
+        <input type="radio" id="Engineer" name="role" value="Engineer">
+        <label for="role">Engineer</label>
+        <input type="radio" id="Manager" name="role" value="Manager">
+        <label for="role">Manager</label>
+        <input type="radio" id="Guest" name="role" value="Guest">
+        <label for="role">Guest</label>    
+        
+    </fieldset>
+  
+  <br><br><br>
+  <input type="reset" value="Reset">
+    
+<button onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+  alert("Submitted Successfully!");
+}
+</script>
+</form>
+  
+</body>
+</html>
