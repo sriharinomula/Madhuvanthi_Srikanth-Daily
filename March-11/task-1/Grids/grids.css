@@ -1,0 +1,64 @@
+.grid-item1 { grid-area: One; }
+.grid-item2 { grid-area: Two; }
+.grid-item3 { grid-area: Three; }
+.grid-item4 { grid-area: Four; }
+.grid-item5 { grid-area: Five; }
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'One One One One One One'
+    'Two Three Three Three three Four'
+    'Two Five Five Five Five Four';
+    background-color: rgb(76, 30, 148);
+    padding: 10px;
+}
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+.grid-item1{
+    border: 2px solid rgba(193, 26, 26, 0.8);
+    background-color: rgb(15, 113, 113);
+    padding: 20px;
+    font-size: large;
+    text-align: center;
+    justify-items: center;
+    grid-gap: 10px;
+
+}
+
+.grid-item2{
+    background-color: black;
+    border: 2px solid rgba(151, 238, 36, 0.8);
+    padding: 30px;
+    font-size: large;
+    text-align: center;
+}
+.grid-item3{
+    background-color: black;
+    border: 2px solid rgba(26, 71, 123, 0.8);
+    padding: 30px;
+    font-size: large;
+    text-align: center;
+    grid-gap: 30px;
+    justify-tracks: unset;
+}
+.grid-item4{
+    background-color: black;
+    border: 2px solid rgba(82, 30, 102, 0.8);
+    padding: 30px;
+    font-size: large;
+    text-align: center;
+    grid-gap: 20px;
+}
+.grid-item5{
+    background-color: black;
+    border: 2px solid rgba(223, 95, 106, 0.8);
+    padding: 30px;
+    font-size: large;
+    text-align: center;
+    grid-gap: 20px;
+}
