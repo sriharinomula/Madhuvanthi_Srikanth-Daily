@@ -1,0 +1,17 @@
+.flex-container{
+    display: flex;
+    background-color: rgb(33, 25, 82);
+    flex-direction: column-reverse;  
+   flex-wrap: wrap; 
+   justify-content: space-between;
+    align-items:stretch; /*flex-end,-start, stretch */
+    height:300px;
+
+}
+
+.flex-container > div{
+    background-color: rgb(246, 234, 63);
+    margin:20px;
+    padding: 20px;
+    font-size:x-large;
+}
