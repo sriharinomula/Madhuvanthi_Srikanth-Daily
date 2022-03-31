@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conference HALLS</title>
+    <!--Font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo"></a>
+                <img src="logo.png" alt="" width="200" height="200">
+
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars open-state"></i>
+                    <i class="fas fa-times close-state"></i>
+
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html " class="nav-link">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="weather.html" class="nav-link">WEATHER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conf.html" class="nav-link">Conference Halls Booked</a>
+                    </li>
+
+                   
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="container">
+                <div class="main-heading">
+                    <h1 class="title">DISCOVER</h1>
+                    <h2 class="subtitle">CONFERENCE ROOMS</h2>
+
+                </div>
+                <a href="hotels.html" class="btn btn-gradient" >EXPLORE NOW
+                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </a>
+            </div>
+
+        </div>
+        </div>
+        <section class="booking">
+            <div class="container">
+                <form action="" class="form">
+                    <div class="input-group">
+                        <label for="meets" class="input-label">DESTINATION</label>
+                        <input type="text" class="input" id="meets" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Date" class="input-label">DATE</label>
+                        <input type="date" class="input" id="Date" pattern="\d{2}-\d{2}-\d{4}" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Timing" class="input-label">TIME</label>
+                        <input type="time" class="input" id="Timing" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="NumberOfPeople" class="input-label">Number of People</label>
+                        <input type="number" class="input" id="noe" min="5" max="100" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="company" class="input-label">COMPANY</label>
+                        <select class="options" id="company" required>
+                            <option value="Taylor and Francis">TAYLOR AND FRANCIS</option>
+                            <option value="Prograd">PROGRAD</option>
+                            <option value="Amazon">AMAZON</option>
+                            <option value="Freshworks">FRESHWORKS</option>
+                            <option value="Thoughtworks">THOUGHTWORKS</option>
+
+                        </select>
+                    </div>
+                    <button type="submit" id="save-conference" class="btn form-btn btn-purple">
+                        <h2>STORE DEETS</h2>
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="hotels">
+            <div class="container">
+                <h5 class="section-head">
+                    <a href="weather.html" class="btn btn-gradient">
+                        <span class="heading">
+                            <h1>WANT TO KNOW
+                                <span class="sub-heading">THE WEATHER RIGHT NOW??
+                            </h1>
+                        </span></a>
+                </h5>
+                <div class="grid">
+                    <div class="grid-item featured-hotels">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer">
+        <p>
+        <h1>CONTACT</h1>
+        </p>
+        <div class="navbar">
+            <p><a href="tel:+919361879592">Phone</a></p>
+            <p><a href="mailto:madhuvanthisrikanth21820.com">Send Email</a></p>
+            <p><a href="index1.html">Queries</a></p>
+            <p><a href="conf.html" class="right">Conferences</a></p>
+
+        </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
