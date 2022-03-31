@@ -1,0 +1,103 @@
+:root {
+  --dark-color: #2d2c2c;
+  --purple-solid: #350a4f;
+  --purple-transparent: rgba(53, 10, 79, 0.7);
+  --purple-transparent-alt: rgba(53, 10, 79, 0.5);
+  --purple-light: #8f50fb;
+  --yellow-solid: #fa9e2c;
+  --gradient-color: linear-gradient(
+    to right,
+    var(--yellow-solid),
+    var(--purple-light)
+  );
+  --gradient-color-alt: linear-gradient(
+    to right,
+    var(--purple-light),
+    var(--yellow-solid)
+  );
+}
+*{
+  background: url('https://picsum.photos/1920') center no-repeat;
+
+}
+.btn-gradient {
+  background-color: rgb(56, 45, 2);
+  color: rgb(199, 184, 184);
+}
+.btn-gradient:hover {
+  background-image: var(--gradient-color-alt);
+}
+
+.hotels {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  ::placeholder{
+    color: inherit;
+  }
+  
+  .section-head{
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  
+  .heading{
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  
+  .sub-heading{
+    font-size: 1.7rem;
+    font-family: 'Courgette',cursive;
+    font-weight: 300;
+    color: #0c0c16;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(38rem,1fr));
+    grid-gap: 2.5rem;
+  }
+  
+  .grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-hotels{
+    height: 35rem;
+    color:#fff;
+    padding: 1rem;
+    position: relative;
+    z-index: 0;
+  }
+  .featured-hotels::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-transparent-alt);
+    z-index: -1;
+  }
+  .btn {
+    color: rgb(254, 254, 254);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 3.5rem;
+    border-radius: 10rem;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* .hotel-image{
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  } */
