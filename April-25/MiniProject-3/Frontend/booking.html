@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="booking">
+        <div class="container">
+            <form action="" class="form">
+                <div class="input-group">
+                    <label for="meets" class="input-label">DESTINATION</label>
+                    <input type="text" class="input" id="meets" required>
+                </div>
+                <div class="input-group">
+                    <label for="Date" class="input-label">DATE</label>
+                    <input type="date" class="input" id="Date" pattern="\d{2}-\d{2}-\d{4}" required>
+                </div>
+                <div class="input-group">
+                    <label for="Timing" class="input-label">TIME</label>
+                    <input type="time" class="input" id="Timing" required>
+                </div>
+                <div class="input-group">
+                    <label for="NumberOfPeople" class="input-label">Number of People</label>
+                    <input type="number" class="input" id="noe" min="5" max="100" required>
+                </div>
+                <div class="input-group">
+                    <label for="company" class="input-label">COMPANY</label>
+                    <select class="options" id="company" required>
+                        <option value="Taylor and Francis">TAYLOR AND FRANCIS</option>
+                        <option value="Prograd">PROGRAD</option>
+                        <option value="Amazon">AMAZON</option>
+                        <option value="Freshworks">FRESHWORKS</option>
+                        <option value="Thoughtworks">THOUGHTWORKS</option>
+
+                    </select>
+                </div>
+                <button type="submit" id="save-conference" class="btn form-btn btn-purple">
+                    <h2>STORE DEETS</h2>
+                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

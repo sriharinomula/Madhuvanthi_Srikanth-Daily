@@ -1,0 +1,92 @@
+.header.responsive{
+    position: relative;
+}
+.header.responsive.menubar{
+    position:absolute;
+    display:block;
+    right:0;
+    top:0;
+}
+.header.responsive button{
+    float:none;
+    display:block;
+    text-align: left;
+    font-size: 5px;
+}
+
+#popup1{
+    display:none;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+}
+#popup2{
+    display:none;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+}
+#popup3{
+    display:none;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+}
+#popup4{
+    display:none;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+}
+.data{
+    background-color: #fff;
+    width:520px;
+    margin:10% auto;
+    padding: 5px 20px 13px 20px;
+    border:15px solid #ddd;
+    position:relative;
+}
+.close{
+    background-color: rgba(0,0,0,0.8);
+    border:3px solid #ccc;
+    height:24px;
+    line-height: 24px;
+    position: absolute;
+    left:560px;
+    bottom:220px;
+    cursor:pointer;
+
+}
+.close:hover{
+    background-color: rgba(0,122,200,0.8);
+}
+.table{
+    border:10px solid rgba(255, 30, 0, 0.972);
+   
+    margin:10% auto;
+    position: relative;
+    height:24px;
+    justify-content: center;
+}
+.table thead{
+    background-color: rgba(0, 160, 200, 0.924);
+}
+.table tbody{
+    background-color:rgba(0, 160, 200, 0.924) ;
+}

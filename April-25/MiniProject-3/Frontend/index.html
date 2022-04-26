@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conference HALLS</title>
+    <!--Font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo"></a>
+                <img src="logo.png" alt="" width="200" height="200">
+                <a href="login.html" class="btn btn-gradient"> LOGIN  </a>
+                <a href="weather.html" class="btn btn-gradient"> WEATHER </a>
+                <a href="conf.html" class="btn btn-gradient"> Conference Halls Booked  </a>
+                <a href="feedback.html" class="btn btn-gradient" onclick="handleFeedback()">   FEEDBACK  </a>
+                <a class="btn btn-gradient" href="#" onclick="displayUserFeedbacks()"> ADMIN</a>
+                
+
+                <!-- <div class="hamburger-menu">
+                    <i class="fas fa-bars open-state"></i>
+                    <i class="fas fa-times close-state"></i>
+
+                </div> -->
+                <!-- <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html " class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./my files/login.html" class="nav-link" > ADMIN</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="weather.html" class="nav-link">WEATHER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conf.html" class="nav-link"> Conference Halls Booked</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="feedback.html" class="nav-link" onclick="handleFeedback()"> FEEDBACK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                          class="nav-link nav-feature"
+                          href="#"
+                          style="color: whitesmoke"
+                          onclick="displayUserFeedbacks()"
+                          >show feedbacks</a
+                        >
+                      </li>
+                    
+                    
+                      
+                                
+                   
+                    
+                </ul>-->
+            </nav>
+        </div>
+    </header> 
+    <div id="popUpContainer" hidden>
+        <div class="card" id="form1" style="width: 25rem; height: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">Did you find what you were looking for?</h5>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="form1-res1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="form1-res2"
+              />
+              <label class="form-check-label" for="flexRadioDefault2"> No </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="form1-res3"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Not Sure
+              </label>
+            </div>
+            <br />
+            <a href="#" id="form1-submit" class="btn btn-gradient">submit</a>
+          </div>
+        </div>
+        <div class="card" id="form2" style="width: 25rem; height: 24rem" hidden>
+          <div class="card-body">
+            <h5 class="card-title">
+                We're sorry to hear that:(..<br> How can we serve you
+            </h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  value="contains inaccurate or outdated information"
+                  id="form2-res1"
+                  aria-label="..."
+                />
+                INFORMATION NOT UPDATED
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  value="missing information"
+                  id="form2-res2"
+                  aria-label="..."
+                />
+                NOTHING SPECIFIC , I JUST DONT LIKE IT
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  value="confusing or difficult to understand"
+                  id="form2-res3"
+                  aria-label="..."
+                />
+                DID NOT SUIT MY LIKING
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  value="wrong information"
+                  id="form2-res4"
+                  aria-label="..."
+                />
+                NOT VERY USER FRIENDLY
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  value="something else"
+                  id="form2-res5"
+                  aria-label="..."
+                />
+                OTHER
+              </li>
+            </ul>
+            <br />
+            <a href="#" id="form2-submit" class="btn btn-gradient">submit</a>
+          </div>
+        </div>
+        <div class="card" id="form3" style="width: 25rem; height: 20rem" hidden>
+          <div class="card-body">
+            <h5 class="card-title">YOUR VALUABLE SUGGESTIONS TO HELP US SERVE YOU BETTER!</h5>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="user-feedback"
+                style="height: 100px"
+              ></textarea>
+              <label for="floatingTextarea2">Comments</label>
+            </div>
+            <br />
+            <a href="#" id="form3-submit" class="btn btn-gradient">submit</a>
+          </div>
+        </div>
+      </div>
+      
+            
+    <main>
+        <div class="hero">
+            <div class="container">
+                <div class="main-heading">
+                    <h1 class="title">DISCOVER</h1>
+                    <h2 class="subtitle">CONFERENCE ROOMS</h2>
+
+                </div>
+                <a href="hotels.html" class="btn btn-gradient" >EXPLORE NOW
+                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </a>
+            </div>
+
+        </div>
+        </div>
+        <section class="booking">
+            <div class="container">
+                <form action="" class="form">
+                    <div class="input-group">
+                        <label for="meets" class="input-label">DESTINATION</label>
+                        <input type="text" class="input" id="meets" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Date" class="input-label">DATE</label>
+                        <input type="date" class="input" id="Date" pattern="\d{2}-\d{2}-\d{4}" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Timing" class="input-label">TIME</label>
+                        <input type="time" class="input" id="Timing" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="NumberOfPeople" class="input-label">Number of People</label>
+                        <input type="number" class="input" id="noe" min="5" max="100" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="company" class="input-label">COMPANY</label>
+                        <select class="options" id="company" required>
+                            <option value="Taylor and Francis">TAYLOR AND FRANCIS</option>
+                            <option value="Prograd">PROGRAD</option>
+                            <option value="Amazon">AMAZON</option>
+                            <option value="Freshworks">FRESHWORKS</option>
+                            <option value="Thoughtworks">THOUGHTWORKS</option>
+
+                        </select>
+                    </div>
+                    <button type="submit" id="save-conference" class="btn btn-gradient">
+                        <h2>STORE DEETS</h2>
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="hotels">
+            <div class="container">
+                <h5 class="section-head">
+                    <a href="weather.html" class="btn btn-gradient">
+                        <span class="heading">
+                            <h3>WANT TO KNOW
+                                <span class="sub-heading">THE WEATHER RIGHT NOW??
+                            </h3>
+                        </span></a>
+                </h5>
+                <!-- <div class="grid">
+                    <div class="grid-item featured-hotels">
+
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer">
+        <p>
+        <h1>CONTACT</h1>
+        </p>
+        <div class="navbar">
+            <p><a href="tel:+919361879592">Phone</a></p>
+            <p><a href="mailto:madhuvanthisrikanth21820.com">Send Email</a></p>
+            <p><a href="index1.html">Queries</a></p>
+            <p><a href="conf.html" class="right">Conferences</a></p>
+
+        </div>
+
+
+        <!-- <div class="container2  " id="container2" hidden>
+            <div id="form1" style="    border: 2px solid black;
+            padding: 20px;">
+              <p>Does the project solves your issue?</p><br><br>
+              <div><button type="button">yes</button></div>
+              <div><button type="button">no</button></div>
+              <div><button type="button">not sure</button></div>-->
+                
+            <!--  <input type="radio" id="form1_yes"/><label>&nbsp&nbsp YES</label><br><br>
+              <input type="radio" id="form1_no"/><label>&nbsp&nbsp NO</label><br><br>
+              <input type="radio" id="form1_not_sure"/><label>&nbsp&nbsp Not Sure</label><br><br>
+      
+              <button type="submit" class="btn btn-gradient" id="form1_button">NEXT</button>
+            
+            </div>
+            <div id="form2" style="
+            border: 2px solid cadetblue;
+            padding: 50px;
+        "hidden>
+              <h3>What is the issue?</h3><br>
+              <ul style="list-style-type: none;">
+                <li><input type="checkbox" id="form2_1"><label>&nbsp&nbsp Wrong Recipe</label></li><br>
+                <li><input type="checkbox" id="form2_2"><label>&nbsp&nbsp Wrong ingredients list</label></li>   <br>       
+                <li><input type="checkbox" id="form2_3"><label>&nbsp&nbsp Wrong video suggestion</label></li><br>
+                <li><input type="checkbox" id="form2_4"><label>&nbsp&nbsp Not so descriptive content</label></li><br>
+                <li><input type="checkbox" id="form2_5"><label>&nbsp&nbsp UI not good </label></li><br><br>
+      
+              </ul>
+              <button type="submit" class="btn btn-gradient" id="form2_button">Next</button>
+              
+            </div>
+            <div id="form3" style="border: 2px solid black;
+            padding: 14px;" hidden><br>
+              <p>Please provide your feedback</p><br>
+              <textarea id="from3_response" style="    border: 2px solid cadetblue;
+              " name="Response" rows="4" cols="50"></textarea><br><br>
+            <button type="submit" class= "btn black" id="form3_button">SUBMIT</button>
+            </div>
+             -->
+          </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
