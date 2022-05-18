@@ -10,7 +10,7 @@ app.use(initDB);
 
 app.use('/users',userRouter);
 
-app.listen(3000,()=>console.log('Listening...!!!'));
+app.listen(3000,()=>console.log('SERVER UP AND RUNNING ON 3000!!!'));
 
 
 
